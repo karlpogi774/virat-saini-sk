@@ -13,10 +13,8 @@ module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils
   var name = await Users.getNameUser(event.senderID);
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("chaddi") ||
-     react.includes("colour") ||
-     react.includes("pehne") ||
-react.includes("chadi")) {
+  if(react.includes("chaddi") 
+react.includes("Chaddi")) {
     var msg = {
         body: `LO DEKH LO 😒😒👈`,attachment: fs.createReadStream(__dirname + `/noprefix/chaddi.jpg`)
       }
