@@ -2,7 +2,7 @@ module.exports.config = {
   name: "leave",
   version: "1.0.3",
   hasPermssion: 2,
-  credits: "Raj",
+  credits: "virat",
   description: "Bot leaves group with custom message",
   commandCategory: "Admin",
   usages: "leave",
@@ -17,13 +17,13 @@ module.exports.handleEvent = async function({ api, event }) {
   if (!message) return;
 
   // ✅ Trigger phrases
-  if (message === "bot nikal ja" || message === "leave now" || message === "out ho ja") {
+  if (message === "basanti left kar" || message === "leave now" || message === "out ho ja bot") {
     // Check if sender is admin
     const threadInfo = await api.getThreadInfo(event.threadID);
     const adminIDs = threadInfo.adminIDs.map(e => e.id);
     if (!adminIDs.includes(senderID)) return;
 
-    const farewell = "Ok Raj Boss Ja Raha hu Group se 🥰";
+    const farewell = "Ok Virat Boss Ja Rahi hu Group se 🥰";
 
     await api.sendMessage(farewell, event.threadID);
     setTimeout(() => {
@@ -36,7 +36,7 @@ module.exports.run = async function({ api, event, args }) {
   const tid = args[0];
   if (!tid) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
 
-  const farewell = "Ok Raj Boss Ja Raha hu Group se 🥰";
+  const farewell = "Ok virat Boss Ja Rahi hu Group se jiski vajah se mujhe bhaga rahe ho vo chutiya hai bsdk🥰";
 
   await api.sendMessage(farewell, event.threadID);
   setTimeout(() => {
