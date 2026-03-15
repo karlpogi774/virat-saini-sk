@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "Hanuman ji",
+  name: "Hanuman",
     version: "2.1.1",
   hasPermssion: 0,
   credits: "PRINCE RAJPUT", 
@@ -14,11 +14,9 @@ module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
   if(react.includes("Hanuman") ||
-     react.includes("bajrangbali") ||
-     react.includes("hanuman") ||
-react.includes("HanuMan")) {
+react.includes("bajrangbali")) {
     var msg = {
-        body: `💖⎯⎯❥ Hanuman ji ❥⎯⎯💖🙏👈`,attachment: fs.createReadStream(__dirname + `/noprefix/hanuman.mp4`)
+        body: `💖⎯⎯❥ Hanuman ji ❥⎯⎯💖🙏👈`,attachment: fs.createReadStream(__dirname + `/noprefix/hanu.mp4`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😍", event.messageID, (err) => {}, true)
