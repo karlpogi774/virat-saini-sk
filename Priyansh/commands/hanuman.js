@@ -1,27 +1,29 @@
+//@Prem-babu3608
+////////////////////////////////////////////////////////
+/////// WARNING => JO CREDIT NAME CHANGE KREGA USKA ID BAN KAR DIYA JAYEGA + THIS BOT IS MADE BT PREM BABU
 const fs = require("fs");
 module.exports.config = {
-  name: "Hanuman",
-    version: "2.1.1",
-  hasPermssion: 0,
-  credits: "PRINCE RAJPUT", 
-  description: "Just Respond",
-  commandCategory: "no prefix",
+	name: "hanuman",
+    version: "1.1.1",
+	hasPermssion: 0,
+	credits: "PREM BABU", ////////@prem-babu3608
+	description: "THIS BOT IS MR PREM SHARMA",
+	commandCategory: "no prefix",
     cooldowns: 5, 
 };
 
-module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils, client, global }) => {
-  var name = await Users.getNameUser(event.senderID);
-  var { threadID, messageID } = event;
-  let react = event.body.toLowerCase();
-  if(react.includes("Hanuman") ||
-react.includes("bajrangbali")) {
-    var msg = {
-        body: `💖⎯⎯❥ Hanuman ji ❥⎯⎯💖🙏👈`,attachment: fs.createReadStream(__dirname + `/noprefix/hanu.mp4`)
-      }
-      api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😍", event.messageID, (err) => {}, true)
-    }
-  }
-  module.exports.run = async ({ api, event, Currencies, args, utils, client, global }) => {
+module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
+	var { threadID, messageID } = event;
+	let react = event.body.toLowerCase();
+	if(react.includes("Hanuman") ||
+react.includes("hanuman")) {
+		var msg = {
+				body: `💜Jai Hanuman ji🤩💜`,attachment: fs.createReadStream(__dirname + `/noprefix/hanu.mp4`)
+			}
+			api.sendMessage(msg, threadID, messageID);
+    api.setMessageReaction("👑", event.messageID, (err) => {}, true)
+		}
+	}
+	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
   }
