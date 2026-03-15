@@ -16,15 +16,14 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("mata") ||
-react.includes("mAtA")) {
+react.includes("Mata")) {
 		var msg = {
-				body: `💜|| 💖⎯⎯❥ Jai mata di ❥⎯⎯💖 ||💜`,attachment: fs.createReadStream(__dirname + `/noprefix/mata.mp4`)
+				body: `💜Jai Mata Di 🤩💜`,attachment: fs.createReadStream(__dirname + `/noprefix/mata.mp4`)
 			}
 			api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("🥰", event.messageID, (err) => {}, true)
+    api.setMessageReaction("👑", event.messageID, (err) => {}, true)
 		}
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
   }
-,sher.mp4
