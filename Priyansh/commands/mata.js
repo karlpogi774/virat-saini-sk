@@ -16,8 +16,6 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("mata") ||
-     react.includes("Mata") || react.includes("COLdrink") || react.includes("ColdRINk") ||
-react.includes("MATA") ||
 react.includes("mAtA")) {
 		var msg = {
 				body: `💜|| 💖⎯⎯❥ Jai mata di ❥⎯⎯💖 ||💜`,attachment: fs.createReadStream(__dirname + `/noprefix/mata.mp4`)
