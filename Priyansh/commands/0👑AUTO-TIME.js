@@ -45,18 +45,12 @@ const messages = [
 function buildMessage(time, text) {
     const now = moment().tz("Asia/Kolkata");
 
-    return `☆ ᕱ⑅ᕱ
-ପ(„• ༝ •„)ଓ
-┏━∪∪━━━━━━━━━━━━━┓
- ⋆☀︎.˖˳ 𝐓𝐢𝐦𝐞 ✅ ⋆⋆˖⋆☀︎.
-┗━━━━━━━━━━━━━━━━┛  
+    return `
 
 🕐 TIME: ${time}
 📅 DATE: ${now.format("DD MMMM YYYY").toUpperCase()}
 
 ${text}
-
-━━━━━━━━━━━━━━━
  `;
     var link = [
 "https://i.imgur.com/a7kd3ov.jpeg"
